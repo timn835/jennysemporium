@@ -1,26 +1,26 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { ArrowDownToLine, CheckCircle, Leaf, PackageCheck } from "lucide-react";
+import { HeartHandshake, Piano, Rabbit } from "lucide-react";
 import Link from "next/link";
 
 const perks = [
   {
-    name: "Fast delivery",
-    Icon: PackageCheck,
+    name: "Elegance and Originality",
+    Icon: Piano,
     description:
-      "Get your products to your doorstep on the same day in the Montreal area!",
+      "Our artists produce original and personal content that can touch anyone's heart.",
   },
   {
-    name: "Guaranteed quality",
-    Icon: CheckCircle,
+    name: "Quick Delivery",
+    Icon: Rabbit,
     description:
-      "Every product on our platform is guaranteed to be top notch. 30-day refund period offered on every product.",
+      "Custom requests are dealt with haste, as our content creators are always full of inspiration!",
   },
   {
-    name: "For the planet",
-    Icon: Leaf,
+    name: "Customizable Content",
+    Icon: HeartHandshake,
     description:
-      "Every $1 for every product goes to various environment volunteer organisations!",
+      "Communicate with us directly and let us know exactly what you want to create!",
   },
 ];
 
@@ -30,18 +30,26 @@ export default function Home() {
       <MaxWidthWrapper>
         <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Your marketplace for high-quality{" "}
-            <span className="text-purple-600">products and finds</span>
+            Your marketplace for personalized{" "}
+            <span className="text-purple-600">
+              artistic creations and designs
+            </span>
           </h1>
           <p className="mt-6 text-lg max-w-prose text-muted-foreground">
-            Welcome to Jenny&apos;s Treasure Emporium! Every product on our
-            platform is verified and of the highest quality!
+            Welcome to{" "}
+            <span className="font-semibold">
+              Jenny&apos;s Treasure Emporium
+            </span>
+            ! Here you will find songs, poems, music, paintings and any creation
+            your artist&apos;s soul may desire!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Link href="/products" className={buttonVariants()}>
               Browse Trending
             </Link>
-            <Button variant="ghost">Our quality promise &rarr;</Button>
+            <Button variant="ghost" className="hover:bg-teal-100">
+              Our quality promise &rarr;
+            </Button>
           </div>
         </div>
 
@@ -56,7 +64,7 @@ export default function Home() {
                 className="text-center md:flex md:items-start md:text-left lg:block lg:text-center"
               >
                 <div className="md:flex-shrink-0 flex justify-center">
-                  <div className="h-16 w-16 flex items-center justify-center rounded-full bg-purple-100 text-purple-900">
+                  <div className="h-16 w-16 flex items-center justify-center rounded-full bg-amber-100 text-amber-900">
                     {<perk.Icon className="h-1/3 w-1/3" />}
                   </div>
                 </div>
