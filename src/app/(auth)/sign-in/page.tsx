@@ -127,7 +127,10 @@ const Page = () => {
               </div>
             </form>
             <div className="relative">
-              <div className="absolute inset-0 flex items-center" aria-hidden>
+              <div
+                className="absolute inset-0 flex items-center"
+                aria-hidden="true"
+              >
                 <span className="w-full border-t" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">

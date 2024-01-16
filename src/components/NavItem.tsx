@@ -42,7 +42,7 @@ const NavItem = ({ isAnyOpen, category, isOpen, handleOpen }: NavItemProps) => {
         >
           <div
             className="absolute inset-0 top-1/2 bg-white shadow"
-            aria-hidden
+            aria-hidden="true"
           />
           <div className="relative bg-white">
             <div className="mx-auto max-w-7xl px-8">
@@ -67,7 +67,7 @@ const NavItem = ({ isAnyOpen, category, isOpen, handleOpen }: NavItemProps) => {
                       >
                         {item.name}
                       </Link>
-                      <p className="mt-1" aria-hidden>
+                      <p className="mt-1" aria-hidden="true">
                         Shop now
                       </p>
                     </div>

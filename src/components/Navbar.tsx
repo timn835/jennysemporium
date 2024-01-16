@@ -41,7 +41,7 @@ const Navbar = async () => {
                     </Link>
                   )}
                   {user ? null : (
-                    <span className="h-6 w-px bg-gray-200" aria-hidden />
+                    <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   )}
 
                   {user ? (
@@ -59,12 +59,15 @@ const Navbar = async () => {
                   )}
 
                   {user ? (
-                    <span className="h-6 w-px bg-gray-200" aria-hidden />
+                    <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   ) : null}
 
                   {user ? null : (
                     <div className="flex lg:ml-6">
-                      <span className="h-6 w-px bg-gray-200" aria-hidden />
+                      <span
+                        className="h-6 w-px bg-gray-200"
+                        aria-hidden="true"
+                      />
                     </div>
                   )}
 
