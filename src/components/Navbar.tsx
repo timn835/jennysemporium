@@ -5,9 +5,13 @@ import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
 import { cn } from "@/lib/utils";
 import Cart from "./Cart";
+import { getServerSideUser } from "../lib/payloadUtils";
+import { cookies } from "next/headers";
+import UserAccountNav from "./UserAccountNav";
 
-const Navbar = () => {
-  const user = null;
+const Navbar = async () => {
+  const nextCookies = cookies();
+  const { user } = await getServerSideUser(nextCookies);
   return (
     <div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
       <header className="relative bg-white">
@@ -17,7 +21,7 @@ const Navbar = () => {
               {/* TODO: Mobile  */}
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
-                  <Icons.logo className="h-10 w-10 rounded-full hover:bg-teal-100" />
+                  <Icons.logo className="h-10 w-10 rounded-full hover:bg-teal-100 transition-colors" />
                 </Link>
               </div>
               <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
@@ -41,7 +45,7 @@ const Navbar = () => {
                   )}
 
                   {user ? (
-                    <p></p>
+                    <UserAccountNav user={user} />
                   ) : (
                     <Link
                       href="/sign-up"

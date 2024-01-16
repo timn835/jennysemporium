@@ -9,14 +9,14 @@
 export interface Config {
   collections: {
     users: User;
-    "payload-preferences": PayloadPreference;
-    "payload-migrations": PayloadMigration;
+    'payload-preferences': PayloadPreference;
+    'payload-migrations': PayloadMigration;
   };
   globals: {};
 }
 export interface User {
   id: string;
-  role: "admin" | "user";
+  role?: ('admin' | 'user') | null;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -24,6 +24,8 @@ export interface User {
   resetPasswordExpiration?: string | null;
   salt?: string | null;
   hash?: string | null;
+  _verified?: boolean | null;
+  _verificationToken?: string | null;
   loginAttempts?: number | null;
   lockUntil?: string | null;
   password: string | null;
@@ -31,7 +33,7 @@ export interface User {
 export interface PayloadPreference {
   id: string;
   user: {
-    relationTo: "users";
+    relationTo: 'users';
     value: string | User;
   };
   key?: string | null;
@@ -55,6 +57,7 @@ export interface PayloadMigration {
   createdAt: string;
 }
 
-declare module "payload" {
+
+declare module 'payload' {
   export interface GeneratedTypes extends Config {}
 }
