@@ -44,14 +44,14 @@ export const Products: CollectionConfig = {
       options: PRODUCT_CATEGORIES.map(({ label, value }) => ({ label, value })),
       required: true,
     },
-    // {
-    //   name: "productFiles",
-    //   label: "Product file(s)",
-    //   type: "relationship",
-    //   required: true,
-    //   relationTo: "product_files",
-    //   hasMany: false,
-    // },
+    {
+      name: "productFiles",
+      label: "Product file(s)",
+      type: "relationship",
+      required: true,
+      relationTo: "productFiles",
+      hasMany: false,
+    },
     {
       name: "approvedForSale",
       label: "Product Status",
