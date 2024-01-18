@@ -53,8 +53,8 @@ const Cart = () => {
           <>
             <div className="flex w-full flex-col pr-6">
               <ScrollArea>
-                {items.map(({ product }) => (
-                  <CartItem key={product.id} product={product} />
+                {items.map(({ product }, i) => (
+                  <CartItem key={`${product.id} - ${i}`} product={product} />
                 ))}
               </ScrollArea>
             </div>

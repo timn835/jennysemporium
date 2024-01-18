@@ -21,7 +21,7 @@ const Navbar = async () => {
               {/* TODO: Mobile  */}
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
-                  <Icons.logo className="h-10 w-10 rounded-full hover:bg-teal-100 transition-colors" />
+                  <Icons.logo className="h-15 w-15 p-1 rounded-full hover:bg-teal-100 transition-colors" />
                 </Link>
               </div>
               <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
