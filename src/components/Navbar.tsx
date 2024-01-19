@@ -8,6 +8,7 @@ import Cart from "./Cart";
 import { getServerSideUser } from "../lib/payloadUtils";
 import { cookies } from "next/headers";
 import UserAccountNav from "./UserAccountNav";
+import MobileNav from "./MobileNav";
 
 const Navbar = async () => {
   const nextCookies = cookies();
@@ -18,7 +19,7 @@ const Navbar = async () => {
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
-              {/* TODO: Mobile  */}
+              <MobileNav />
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
                   <Icons.logo className="h-15 w-15 p-1 rounded-full hover:bg-teal-100 transition-colors" />
